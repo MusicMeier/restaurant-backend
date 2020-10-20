@@ -2,13 +2,13 @@ class CuisinesController < ApplicationController
     def index
         @cuisines = Cuisine.all
 
-        render json: @cuisines
+        redirect_to "http://localhost:3001/?cuisineId=#{params[:search_term]}"
     end
 
     def show
         @cuisine = Cuisine.find(params[:id])
 
-        render json: @cuisine
+        render json: @cuisine, include: [ :restaurants, :locations ]
     end
 
     def create

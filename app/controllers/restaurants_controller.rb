@@ -1,16 +1,22 @@
 class RestaurantsController < ApplicationController
 
     def index
-        @restaurants = Restaurant.all
-
-        render json: @restaurants
+        if params[:search_term] 
+            @restaurants = Restaurant.joins(:cuisine).where(
+                "cuisines.name LIKE '%#{params[:search_term]}%'"
+            )
+        else
+            @restaurants = Restaurant.all
+        end
+        
+        render json: @restaurants,  include:[ :location, :cuisine ]
     end
 
 
     def show
         @restaurant = Restaurant.find(params[:id])
 
-        render json: @restaurant
+        render json: @restaurant,  include: [ :location, :cuisine ]
     end
 
     def create
