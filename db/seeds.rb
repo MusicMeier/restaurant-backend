@@ -10,7 +10,7 @@ Restaurant.destroy_all
 Location.destroy_all
 Cuisine.destroy_all
 
-cap_hill = Location.create(neighborhood: "Cap Hill") 
+cap_hill = Location.create(neighborhood: "Capitol Hill") 
 rino = Location.create(neighborhood: "RiNo") 
 lohi = Location.create(neighborhood: "LoHi") 
 lodo = Location.create(neighborhood: "LoDo") 
@@ -37,6 +37,7 @@ breakfast = Cuisine.create(name: "Breakfast", description: "Eggs, pancakes, fren
 sushi = Cuisine.create(name: "Sushi", description: "Miso soup, edamame, nigiri, sushiimi, rolls...")
 cafe = Cuisine.create(name: "Cafe", description: "Coffee, tea, pastries...")
 food_hall = Cuisine.create(name: "Food Hall", description: "A collective eatery.")
+vegan = Cuisine.create(name: "Vegan", description: "Plant based, No meat!")
 
 park_burger = Restaurant.create(name: "Park Burger", logo: "http://www.parkburger.com/wp-content/themes/parkburger/images/logo.png", rating: 5, price: "$$", phone_number: "(720) 242-9951", location_id: rino.id, cuisine_id: american.id)
 shake_shack = Restaurant.create(name: "Shake Shack", logo: "https://i1.wp.com/digiday.com/wp-content/uploads/2017/08/Shake-Shack.jpg?fit=1696%2C915&ssl=1", rating: 4, price: "$$", phone_number: "(720) 543-8609", location_id: rino.id, cuisine_id: american.id)
@@ -66,6 +67,8 @@ los_chingones = Restaurant.create(name: "Los Chingones", logo: "https://images.g
 work_class = Restaurant.create(name: "Work & Class", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSG5qK8Zbfi3OZjkA23frtLwGbBuR8Rm3UkJQ&usqp=CAU", rating: 5, price: "$$", phone_number: "(303) 292-0702", location_id: rino.id, cuisine_id: mexican.id)
 super_mega = Restaurant.create(name: "Super Mega Bien", logo: "https://supermegabien.com/wp-content/themes/smb/images/SMB-logo-mobile.svg", rating: 5, price: "$$", phone_number: "(720) 269-4695", location_id: rino.id, cuisine_id: mexican.id)
 agave_taco = Restaurant.create(name: "Agave Taco Bar", logo: "http://www.agavetacobar.com/files/4713/8128/4810/Agave-Taco-Bar-Logo.gif", rating: 4, price: "$$", phone_number: "(303) 425-6225", location_id: wash_park.id, cuisine_id: mexican.id)
+machete = Restaurant.create(name: "Machete Tequila + Tacos", logo: "https://machetedenver.com/wp-content/uploads/2017/08/machete_header.png", rating: 4, price: "$$", phone_number: "(303) 333-1567", location_id: cherry_creek.id, cuisine_id: mexican.id)
+d_corazon = Restaurant.create(name: "D'Corazon Mexican Restaurant", logo: "https://lh3.googleusercontent.com/proxy/rZHUIf1xsT9v2p7JqOaKDmSCY9qh-Z6Sc18gvmenAPOcuczTxEhbkdn2iV4ckaXZ16WobZdWjt7x-yqjp-0eTxy7Q7L_pLN25gp-ksIDMvg9-rlEH0gNSBj3apPMsgUWYg", rating: 5, price: "$", phone_number: "(720) 904-8226", location_id: lodo.id, cuisine_id: mexican.id)
 
 little_man = Restaurant.create(name: "Little Man Ice Cream", logo: "https://www.littlemanicecream.com/wp-content/themes/little-man-ice-cream-2017/images/littlemanicecream-logo.png", rating: 5, price: "$", phone_number: "(303) 455-3811", location_id: lohi.id, cuisine_id: dessert.id)
 d_bar = Restaurant.create(name: "D Bar", logo: "https://s3.amazonaws.com/toasttab/restaurants/restaurant-41992000000000000/restaurant_1579277417.jpg", rating: 4, price: "$$", phone_number: "(303) 861-4710", location_id: cap_hill.id, cuisine_id: dessert.id)
@@ -74,6 +77,7 @@ frozen_matter = Restaurant.create(name: "Frozen Matter", logo: "https://lh4.goog
 sweet_action = Restaurant.create(name: "Sweet Action", logo: "https://cdn.shopify.com/s/files/1/1601/5069/t/3/assets/img-logo.svg?v=3420951620454990910", rating: 5, price: "$", phone_number: "(303) 282-4645", location_id: baker.id, cuisine_id: dessert.id)
 inside_scoop = Restaurant.create(name: "Inside Scoop Creamery", logo: "https://pbs.twimg.com/profile_images/1100428076960309248/7ATj-HHW_400x400.png", rating: 5, price: "$", phone_number: "(303) 477-2121", location_id: lohi.id, cuisine_id: dessert.id)
 bonnie_brae = Restaurant.create(name: "Bonnie Brae Ice Cream", logo: "http://bonniebraeicecream.com/wp-content/uploads/2016/02/BBIC-Logo-red-background.jpg", rating: 5, price: "$", phone_number: " (303) 777-0808", location_id: wash_park.id, cuisine_id: dessert.id)
+make_believe = Restaurant.create(name: "Make, Believe Bakery", logo: "https://static1.squarespace.com/static/5b53e988af2096535478bccd/t/5b53ea8a88251b475508a2e7/1603387516078/?format=1500w", rating: 5, price: "$", phone_number: "(303) 318-9843", location_id: cap_hill.id, cuisine_id: dessert.id)
 
 white_pie = Restaurant.create(name: "White Pie", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSfZKCJgqVZoqJMDCrWDSxNxZJWWO-dbnTQKA&usqp=CAU", rating: 5, price: "$$", phone_number: "(303) 862-5323", location_id: cap_hill.id, cuisine_id: pizza.id)
 blue_pan = Restaurant.create(name: "Blue Pan", logo: "https://bluepandenver.com/wp-content/uploads/2019/12/BluePan_Solid_2C_R_367X113-copy.png", rating: 5, price: "$$", phone_number: "(720) 519-0944", location_id: cherry_creek.id, cuisine_id: pizza.id)
@@ -81,6 +85,7 @@ cart_driver = Restaurant.create(name: "Cart Driver", logo: "https://img.gothru.o
 ians = Restaurant.create(name: "Ians", logo: "https://ianspizza.com/wp-content/uploads/2019/11/logo-smallish.png", rating: 5, price: "$", phone_number: "(303) 296-9000", location_id: lodo.id, cuisine_id: pizza.id)
 cosmos_pizza = Restaurant.create(name: "Cosmo's Pizza", logo: "http://cosmospizza.com/wp-content/uploads/2015/07/cosmospizza_logo.png", rating: 5, price: "$", phone_number: "(303) 777-3278", location_id: lodo.id, cuisine_id: pizza.id)
 pie_hole = Restaurant.create(name: "Pie Hole", logo: "http://pieholedenver.com/phtop.jpg", rating: 4, price: "$", phone_number: "(303) 777-4743", location_id: baker.id, cuisine_id: pizza.id)
+marcos = Restaurant.create(name: "Marco's Coal Fired", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRf9c6kIzKOmhtCSsYooQBigj7QAcbqXP67nQ&usqp=CAU", rating: 5, price: "$$", phone_number: "(303) 296-7000", location_id: five_points.id, cuisine_id: pizza.id)
 
 snooze = Restaurant.create(name: "Snooze", logo: "https://www.snoozeeatery.com/wp-content/uploads/2019/07/Standard-Logo.svg", rating: 5, price: "$$", phone_number: "(303) 736-6200", location_id: cherry_creek.id, cuisine_id: breakfast.id)
 wooden_spoon = Restaurant.create(name: "Wooden Spoon", logo: "https://images.squarespace-cdn.com/content/v1/559c9750e4b0480839f8270d/1443241799382-H0RI8MY3J13MLCLJNFIA/ke17ZwdGBToddI8pDm48kPJXHKy2-mnvrsdpGQjlhod7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmrMDYraMJMCQwFxTSOIP7LpSBEQpA-g5k6VTjWbSuadHJq0dp98hg5AZvIaPb3DoM/WS_BAKERY_LOGO_SQUARE.png?format=750w", rating: 5, price: "$", phone_number: "(303) 999-0327", location_id: lohi.id, cuisine_id: breakfast.id)
@@ -111,3 +116,8 @@ avanti = Restaurant.create(name: "Avanti F&B", logo: "https://avantifandb.com/wp
 central_market = Restaurant.create(name: "The Denver Central Market", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTedIt9gQnE4obM5P-JkhbjgzXj8MCfjxZehw&usqp=CAU", rating: 5, price: "$", phone_number: "(720) 888-8888", location_id: rino.id, cuisine_id: food_hall.id)
 milk_market = Restaurant.create(name: "Milk Market", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNIpXpoe5UPgMDfdKzf7OBnzAGyGeKDw9IVw&usqp=CAU", rating: 4, price: "$$", phone_number: "(303) 792-8242", location_id: lodo.id, cuisine_id: food_hall.id)
 stanley_marketplace = Restaurant.create(name: "Stanley Marketplace", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRcZQUA1eFQrZnKuHGcLIiCoJ0QsmXnH-QIoQ&usqp=CAU", rating: 5, price: "$$", phone_number: "(720) 990-6743", location_id: stapleton.id, cuisine_id: food_hall.id)
+
+city_o_city = Restaurant.create(name: "City O' City", logo: "http://static1.squarespace.com/static/5b53924855b02cb0a4f40b17/t/5b539311562fa73754dd047d/1603120842061/?format=1500w", rating: 5, price: "$$", phone_number: "(303) 831-6443", location_id: cap_hill.id, cuisine_id: vegan.id)
+watercourse_foods = Restaurant.create(name: "Watercourse Foods", logo: "https://static1.squarespace.com/static/5b3ab6f65ffd206fbbaf233f/t/5b3ab7912b6a281270fc8b2e/1603415862066/?format=1500w", rating: 5, price: "$$", phone_number: "(303) 832-7313", location_id: city_park.id, cuisine_id: vegan.id)
+corner_beet = Restaurant.create(name: "The Corner Beet", logo: "https://cornerbeet.com/wp-content/uploads/2019/06/The-Corner-Beet-Denver-CO-Logo-2.jpg", rating: 5, price: "$$", phone_number: "(720) 295-4447", location_id: cap_hill.id, cuisine_id: vegan.id)
+beet_box = Restaurant.create(name: "Beet Box", logo: "https://www.beetboxdenver.com/uploads/b/a0f35806af86db15f16d63e044311fb1c7833dac61f61b6668505788764eff8f/beet%20logo_1588793024.png", rating: 5, price: "$$", phone_number: "(303) 861-0017", location_id: city_park.id, cuisine_id: vegan.id)
